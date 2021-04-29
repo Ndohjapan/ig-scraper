@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+    font-family: "Lobster", "Montserrat", cursive, sans-serif;
+}
+
+:root{
+    --primary-color: rgb(131, 58, 180);
+    --secondary-color: rgb(64, 93, 230);
+    --tertiary-color: rgb(225, 66, 66);
+    --hover-color: rgb(247,119,55);
+    --white-color: rgb(226, 226, 226);
+}
+
+html{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background: linear-gradient(50deg, var(--secondary-color), var(--primary-color));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: grid;
+    margin: auto;
+    /* place-content: center; */
+}
+
+.loading{
+    display: none;
+}
+
+.loading i{
+    font-size: 4rem;
+    color: var(--white-color);
+    animation: 2s rotate infinite linear;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    width: 60%;  
+    margin: auto;
+    box-shadow: 2px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button{
+    border: 0;
+    outline: 0;
+}
+
+#ig-username{
+    height: 2.5rem;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem; 
+    border-radius: 0.4rem;
+    margin-top: 0.5rem;
+    background: linear-gradient(to right, rgb(155, 153, 153), rgb(206, 206, 206));
+    font-family: "Roboto";
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: black;
+}
+
+#scrape-acct, button, a{
+    width: 50%;
+    margin: auto;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    background-color: var(--tertiary-color);
+    border-radius: 0.6rem;
+    box-shadow: 0px 1px 10px 2px rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    color: white;
+}
+
+#scrape-acct:hover, button:hover, a:hover{
+    background-color: var(--hover-color);
+}
+
+#input{
+    display: none;
+}
+
+.header-area div i, .header-area div:nth-child(1){
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.header-area div:nth-child(1){
+    margin-right: 1rem;
+}
+
+h3, h2{
+    margin: 0;
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.header-area{
+    display: flex;
+}
+
+button, a{
+    border: none;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--white-color)
+}
+
+ul{
+    padding: 0;
+    text-align: center;
+    width: fit-content;
+}
+
+.result-form{
+    width: 90%;
+    display: none;
+}
+
+.result{
+    text-align: center;
+}
+
+.close{
+    width: 100%;
+    display: flex;
+}
+
+.close-modal{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+.verify{
+    color: blue
+}
+
+span{
+    margin-left: 1rem;
+}
+
+.result{
+    color: var(--hover-color);
+}
+
+@media only screen and (max-width: 450px){
+    .result-form{
+        padding: 1rem 1rem;
+        width: 80%;
+    }
+
+    ul{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    *{
+        /* font-size: 15px; */
+    }
+
+    body{
+        width: 100%;
+    }
+
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    
+    h3, h2{
+        margin: 0;
+        font-size: 1.5rem;
+        color: var(--white-color);
+    }
+
+    .input-form{
+        margin: auto;
+        width: 60%;
+    }
+
+    #scrape-acct{
+        width: 70%;
+        margin: auto;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        background-color: var(--tertiary-color);
+        border-radius: 0.6rem;
+        box-shadow: 0px 1px 10px 2px rgb(0, 0, 0, 0.5);
+        cursor: pointer;
+        letter-spacing: 0.2rem;
+        color: white;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    .input-form{
+        width: 75%;
+        margin: auto;
+        padding: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .input-form{
+        padding: 4rem;
+    }
+
+    #scrape-acct{
+        width: 50%;
+        margin: auto;
+        font-size: 2rem;
+        padding: 0.5rem 0;
+        background-color: var(--tertiary-color);
+        border-radius: 0.6rem;
+        box-shadow: 0px 1px 10px 2px rgb(0, 0, 0, 0.5);
+        cursor: pointer;
+        letter-spacing: 0.2rem;
+        color: white;
+    }
+
+    
+    h3, h2{
+        margin: 0;
+        font-size: 3rem;
+        color: var(--white-color);
+    }
+
+    .header-area div i{
+        font-size: 4rem;
+    }
+
+    #ig-username{
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
